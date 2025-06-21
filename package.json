@@ -5,24 +5,22 @@
 	"license": "MIT",
 	"repository": "timche/cs-doppler-phase",
 	"author": "Tim Cheung <tim@cheung.io>",
-	"exports": {
-		"types": "./dist/index.d.ts",
-		"import": "./dist/esm/index.js",
-		"require": "./dist/cjs/index.js"
-	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
 	"engines": {
 		"node": ">=12"
 	},
 	"scripts": {
 		"test": "vitest",
-		"build": "tsc && tsc --module commonjs --moduleResolution node --outDir ./dist/cjs && tsc --outDir ./dist --declaration --emitDeclarationOnly"
+		"build": "tsc --build"
 	},
 	"files": ["dist"],
 	"keywords": ["counter-strike", "cs", "doppler", "phase"],
 	"devDependencies": {
-		"@biomejs/biome": "1.6.3",
-		"@sindresorhus/tsconfig": "^5.0.0",
-		"typescript": "^5.4.3",
-		"vitest": "^1.4.0"
+		"@biomejs/biome": "2.0.4",
+		"@sindresorhus/tsconfig": "^7.0.0",
+		"typescript": "^5.8.3",
+		"vitest": "^3.2.4"
 	}
 }
